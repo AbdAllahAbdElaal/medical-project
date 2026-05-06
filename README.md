@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Hope Medical Foundation (Simple Multi-Page)
 
 Simple website built with:
@@ -34,3 +35,7 @@ Simple website built with:
 ## Notes
 - If your host disables PHP `mail()`, use SMTP (PHPMailer) later.
 - This project is intentionally simple for easy editing and expansion.
+=======
+# medical-project
+An informative and interactive website for a community organization, aimed at highlighting the organization’s initiatives, projects, and news, and facilitating communication with the community.
+>>>>>>> dfe53fdf237436fd88979b0aed10b227b9c80970
