@@ -15,10 +15,20 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg bg-white shadow-sm sticky-top">
+    
+    <div class="top-bar position-absolute w-100 z-3 py-2 px-4 border-bottom border-light border-opacity-25" style="top: 0; background: rgba(0,0,0,0.15);">
+      <div class="container d-flex justify-content-end">
+        <a href="#" class="text-white text-decoration-none ms-4"><i class="bi bi-twitter-x"></i></a>
+        <a href="#" class="text-white text-decoration-none ms-4"><i class="bi bi-facebook"></i></a>
+        <a href="#" class="text-white text-decoration-none ms-4"><i class="bi bi-instagram"></i></a>
+        <a href="#" class="text-white text-decoration-none ms-4"><i class="bi bi-linkedin"></i></a>
+        <a href="#" class="text-white text-decoration-none ms-4"><i class="bi bi-youtube"></i></a>
+      </div>
+    </div>
+
+    <nav class="navbar navbar-dark navbar-expand-lg bg-transparent position-absolute w-100 z-3 py-3" style="top: 40px;">
       <div class="container">
-        <!-- <img src="images/logo3.png" alt="PULSE Logo" class="logo"> -->
-        <a class="navbar-brand fw-bold" href="index.html">Hope Medical Foundation</a>
+        <a href="index.html" class="logo"><img src="images/logo5.png" alt="PULSE Logo" class="logo"></a>
         <button
           class="navbar-toggler"
           type="button"
@@ -33,71 +43,38 @@
         <div class="collapse navbar-collapse" id="mainNav">
           <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
             <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
-            <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-            <li class="nav-item"><a class="nav-link" href="programs.html">Programs</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+            <li class="nav-item"><a class="nav-link" href="programs.html">Our Programs</a></li>
             <li class="nav-item"><a class="nav-link" href="news.html">News</a></li>
-            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+            <li class="nav-item"><a class="nav-link" href="donate.html">Donation</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
           </ul>
-          <a class="btn btn-primary ms-lg-3" href="donate.html">Donate</a>
+          <a class="btn btn-custom-green ms-lg-4 px-4 fw-bold" href="donate.html">Donate</a>
         </div>
       </div>
     </nav>
 
-    <header id="heroCarousel" class="carousel slide hero-carousel" data-bs-ride="carousel">
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img
-            src="https://images.unsplash.com/photo-1581594549595-35f6edc7b762?auto=format&fit=crop&w=1500&q=80"
-            class="d-block w-100"
-            alt="Healthcare support"
-          />
-          <div class="carousel-caption hero-overlay">
-            <p class="small-title mb-2">Welcome to Hope Medical Foundation</p>
-            <h1 class="display-5 fw-bold mb-3">
-              From Crisis to a Stronger Healthcare Future
+<header class="hero-video-section position-relative min-vh-100 d-flex align-items-center overflow-hidden pb-5">      <video autoplay loop muted playsinline class="position-absolute w-100 h-100 object-fit-cover z-0" style="top: 0; left: 0; object-fit: cover;">
+        <source src="videos/IMG_7730 2.MOV" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+
+      <div class="position-absolute w-100 h-100 bg-dark z-1" style="opacity: 0.55; top: 0; left: 0;"></div>
+
+      <div class="container position-relative z-2 text-white text-start" style="padding-top: 100px;">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mt-5 pt-5">
+            <p class="mb-2 fw-bold text-uppercase" style="letter-spacing: 1px;">Welcome to Our Pulse</p>
+            <h1 class="display-4 fw-bold mb-4 lh-sm" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">
+              Developing Future Doctors & Advancing Community Health
             </h1>
-            <p class="lead mb-4 mx-auto hero-text">
-              Supporting medical students and healthcare workers through education,
-              aid, and practical training.
+            <p class="lead mb-4 fw-normal" style="max-width: 650px; font-size: 1.15rem; text-shadow: 1px 1px 3px rgba(0,0,0,0.5);">
+              LeaderShip, Student Education, Medical Training, Research, & Community Health
             </p>
-            <a href="donate.html" class="btn btn-light btn-lg px-4">Donate Now</a>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <img
-            src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=1500&q=80"
-            class="d-block w-100"
-            alt="Medical education"
-          />
-          <div class="carousel-caption hero-overlay">
-            <p class="small-title mb-2">Education Comes First</p>
-            <h2 class="display-6 fw-bold mb-3">Empowering the Next Generation of Doctors</h2>
-            <p class="lead mb-4 mx-auto hero-text">
-              We provide financial support, medical tools, and mentorship to keep
-              healthcare education moving forward.
-            </p>
-            <a href="donate.html" class="btn btn-light btn-lg px-4">Donate Now</a>
+            <a href="donate.html" class="btn btn-custom-green btn-lg px-5 py-3 fw-bold mt-2">Donate Now</a>
           </div>
         </div>
       </div>
-      <button
-        class="carousel-control-prev"
-        type="button"
-        data-bs-target="#heroCarousel"
-        data-bs-slide="prev"
-      >
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button
-        class="carousel-control-next"
-        type="button"
-        data-bs-target="#heroCarousel"
-        data-bs-slide="next"
-      >
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
     </header>
 
     <section class="py-5">
@@ -116,7 +93,7 @@
       <div class="container">
         <div class="row g-4 align-items-center">
           <div class="col-lg-6">
-            <h2 class="section-title mb-3">Our Impact</h2>
+            <h2 class="section-title mb-3 text-start">Our Impact</h2>
             <p class="text-muted">
               We are committed to creating real change by supporting medical students
               and healthcare workers with direct aid, educational resources, and
@@ -198,7 +175,7 @@
                   </select>
                 </div>
                 <div class="col-12">
-                  <button type="submit" class="btn btn-primary">Join as Volunteer</button>
+                  <button type="submit" class="btn btn-custom-green border-0 w-100 py-2 rounded-3">Join as Volunteer</button>
                 </div>
               </form>
             </div>
@@ -218,11 +195,11 @@
       </div>
     </section>
 
-    <section class="py-5 cta-section text-white text-center">
+    <section class="py-5 cta-section text-white text-center" style="background: linear-gradient(135deg, #00b862, #007a41);">
       <div class="container">
         <h2 class="mb-3">Your Support Can Make a Difference</h2>
         <p class="mb-4">Volunteer, donate, or partner with us to rebuild healthcare education.</p>
-        <a class="btn btn-light btn-lg px-4" href="contact.html">Support Now</a>
+        <a class="btn btn-light text-success btn-lg px-5 rounded-pill fw-bold" href="contact.html">Support Now</a>
       </div>
     </section>
 
