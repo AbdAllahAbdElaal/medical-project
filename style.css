@@ -13,7 +13,8 @@ body {
 }
 
 .page-header {
-  background: linear-gradient(135deg, #0f766e, #0284c7);
+  background: #0f766e;
+  /* background: linear-gradient(135deg, #0f766e, #0284c7); */
 }
 
 .navbar-brand {
@@ -22,7 +23,11 @@ body {
 
 .hero-section {
   min-height: 70vh;
-  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  background: linear-gradient(
+    135deg,
+    var(--primary-color),
+    var(--secondary-color)
+  );
   padding: 90px 0;
 }
 
@@ -40,16 +45,17 @@ body {
 
 .logo {
   padding-top: 10px;
-  height: 80px; 
+  height: 80px;
   width: auto;
   object-fit: contain;
-  /* الخدعة هنا: سنقوم بتكبير الصورة 3 أضعاف لتجاهل المساحة الشفافة */
-  /* transform: scale(4.5);  */
-  transform-origin: left center; /* نجعل التكبير يبدأ من اليسار لكي لا يتداخل مع الروابط */
 }
 
 .navbar.bg-transparent {
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 100%) !important;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.7) 0%,
+    rgba(0, 0, 0, 0) 100%
+  ) !important;
 }
 
 /* تحسين مظهر الروابط عند تمرير الماوس */
@@ -97,7 +103,9 @@ body {
   border-radius: 10px;
   padding: 20px 10px;
   box-shadow: 0 8px 22px rgba(2, 132, 199, 0.08);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
 }
 
 .stat-box:hover {
@@ -115,7 +123,9 @@ body {
   border: 1px solid #e5e7eb;
   border-radius: 10px;
   padding: 20px;
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
 }
 
 .news-box:hover {
@@ -211,10 +221,25 @@ body {
 }
 
 .social-icon:hover {
-  border-color: var(--secondary-color);
-  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-  color: #ffffff !important;
+  /* border-color: var(--secondary-color); */
+  /* background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); */
   transform: translateY(-2px);
+  color: #fff;
+}
+.Facebook-icon:hover {
+  background-color: #0703ffbb;
+}
+.Instagram-icon:hover {
+  background-color: #f73737;
+}
+.Twitter-icon:hover {
+  background-color: #000000;
+}
+.LinkedIn-icon:hover {
+  background-color: #3d41ff;
+}
+.YouTube-icon:hover {
+  background-color: #d60202;
 }
 
 .footer-bottom {
@@ -223,7 +248,9 @@ body {
 }
 
 .card {
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
 }
 
 .card:hover {
@@ -234,7 +261,9 @@ body {
 .reveal {
   opacity: 0;
   transform: translateY(22px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
+  transition:
+    opacity 0.6s ease,
+    transform 0.6s ease;
 }
 
 .reveal.visible {
@@ -263,16 +292,6 @@ body {
   }
 }
 
-
-
-
-
-/* ////////////// */
-
-/* =========================================
-   التعديلات الجديدة (تصميم مؤسسة سمير)
-========================================= */
-
 /* زر التبرع الأخضر المميز */
 .btn-custom-green {
   background-color: #00b862;
@@ -298,3 +317,125 @@ body {
   margin: 10px 0 0 0; /* نقل الخط الزخرفي لليسار */
 }
 
+/* nav bar in small device */
+/* تنسيقات النافبار للشاشات الصغيرة والمتوسطة (الموبايل والتابلت) */
+@media (max-width: 991.98px) {
+  .navbar-collapse {
+    /* إضافة خلفية داكنة بشفافية بسيطة لفصل القائمة عن الصورة */
+    background-color: rgba(
+      31,
+      41,
+      55,
+      0.95
+    ); /* يعادل var(--text-dark) تقريباً */
+
+    /* إضافة تأثير الضبابية (Glassmorphism) للمسة عصرية */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    /* تحسين المساحات والزوايا */
+    padding: 1.5rem;
+    margin-top: 15px;
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  }
+
+  /* توسيط الروابط وإضافة مسافة بينها لسهولة النقر */
+  .navbar-nav .nav-item {
+    text-align: center;
+    margin-bottom: 8px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05); /* خط فاصل خفيف جداً */
+  }
+
+  /* إزالة الخط الفاصل من العنصر الأخير */
+  .navbar-nav .nav-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  /* جعل زر التبرع بعرض القائمة بالكامل (UX أفضل للموبايل) */
+  .navbar-collapse .btn-custom-green {
+    display: block;
+    width: 100%;
+    margin-top: 20px !important;
+    text-align: center;
+    margin-left: 0 !important; /* إلغاء الـ ms-lg-4 في الشاشات الصغيرة */
+  }
+}
+
+.whatsapp-icon {
+  animation-name: change;
+  animation-iteration-count: infinite;
+  color: #06a159;
+  animation-duration: 1s;
+  font-size: 17px;
+  margin-right: 7px;
+  padding-top: 3px;
+}
+@keyframes change {
+    0% {
+
+    }
+    50% {
+        color: #02f54b;
+        transform: scale(1.3);
+    }
+    100% {
+
+    }
+}
+
+.email-icon {
+  animation-name: change1;
+  animation-iteration-count: infinite;
+  color: #ffffff;
+  animation-duration: 1s;
+  font-size: 17px;
+  margin-right: 7px;
+  padding-top: 5px;
+}
+@keyframes change1 {
+    0% {
+
+    }
+    50% {
+        color: #a1a1a1;
+        transform: scale(1.3);
+    }
+    100% {
+
+    }
+}
+
+
+/* contact email style */
+.email-outline-btn {
+    color: #4D928F;
+    border: 2px solid #4D928F;
+    background-color: transparent;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.email-outline-btn:hover {
+    background-color: #4D928F;
+    color: #ffffff;
+    transform: translateY(-2px); /* ارتفاع الزر للأعلى قليلاً عند تمرير الماوس */
+    box-shadow: 0 4px 12px rgba(77, 146, 143, 0.2) !important;
+}
+
+/* Overlay For COMING SOON */
+
+/* .blur-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.1); 
+    backdrop-filter: blur(5px); 
+    -webkit-backdrop-filter: blur(5px); 
+    z-index: 10; 
+} */
